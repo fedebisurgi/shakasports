@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shaka Sports — Bicis rodado 29 con entrega en CABA</title>
+<meta name="description" content="Shaka Raptor: mountain bike rodado 29, 21 velocidades, freno a disco y suspensión. Entrega armada a domicilio en CABA. $229.999.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0B1F3F; --navy-2:#132C55; --red:#C8102E; --red-2:#A50D25;
+    --white:#FFFFFF; --off:#F4F6FA; --ink:#0E1726; --muted:#5B6678; --line:#E2E6EE;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.55}
+  h1,h2,h3,.display{font-family:Oswald,Impact,sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1.05}
+  a{color:inherit}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+  /* Stripe bar */
+  .stripes{height:8px;background:repeating-linear-gradient(90deg,var(--red) 0 40px,var(--white) 40px 80px)}
+
+  /* Nav */
+  nav{background:var(--navy);color:var(--white);position:sticky;top:0;z-index:20}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+  .logo span{font-family:Oswald,sans-serif;font-weight:700;font-size:22px;letter-spacing:.08em}
+  .logo b{color:var(--red)}
+  nav .links{display:flex;gap:24px;font-size:14px}
+  nav .links a{text-decoration:none;opacity:.85}
+  nav .links a:hover{opacity:1}
+  .btn{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:var(--white);text-decoration:none;font-weight:700;padding:14px 22px;border-radius:6px;transition:background .15s}
+  .btn:hover{background:var(--red-2)}
+  .btn.ghost{background:transparent;border:2px solid var(--white)}
+  .btn.ghost:hover{background:rgba(255,255,255,.1)}
+  .btn.small{padding:9px 16px;font-size:14px}
+
+  /* Hero */
+  .hero{background:var(--navy);color:var(--white);position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.55) 1.2px,transparent 1.4px);background-size:34px 34px;opacity:.12}
+  .hero .wrap{position:relative;display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center;padding-top:64px;padding-bottom:72px}
+  .tag{display:inline-block;background:var(--red);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:6px 10px;border-radius:3px;margin-bottom:18px}
+  .hero h1{font-size:clamp(44px,6.4vw,78px)}
+  .hero h1 em{font-style:normal;color:var(--red)}
+  .hero p.lead{font-size:18px;opacity:.88;margin:18px 0 26px;max-width:480px}
+  .price{display:flex;align-items:baseline;gap:14px;margin-bottom:26px;flex-wrap:wrap}
+  .price .big{font-family:Oswald,sans-serif;font-size:52px;font-weight:700}
+  .price small{font-size:14px;opacity:.8}
+  .hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .hero-art{background:var(--white);border-radius:14px;padding:22px;box-shadow:0 20px 50px rgba(0,0,0,.35);position:relative}
+  .hero-art img,.hero-art svg{width:100%;height:auto;display:block}
+  .stock{position:absolute;top:-12px;right:18px;background:var(--red);color:#fff;font-weight:700;font-size:13px;padding:7px 12px;border-radius:4px}
+
+  /* Specs strip */
+  .specs{background:var(--red);color:var(--white)}
+  .specs .wrap{display:grid;grid-template-columns:repeat(5,1fr);text-align:center}
+  .spec{padding:20px 8px;border-right:1px solid rgba(255,255,255,.25)}
+  .spec:last-child{border-right:0}
+  .spec .v{font-family:Oswald,sans-serif;font-size:26px;font-weight:700}
+  .spec .k{font-size:13px;opacity:.9}
+
+  section{padding:80px 0}
+  .kicker{color:var(--red);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px}
+  h2{font-size:clamp(32px,4vw,46px);color:var(--navy);margin-bottom:14px}
+  .sub{color:var(--muted);max-width:620px;font-size:17px}
+
+  /* Savings */
+  .savings{background:var(--off)}
+  .savings .grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .calc{background:var(--white);border-radius:12px;padding:28px;border-top:6px solid var(--navy);box-shadow:0 8px 24px rgba(11,31,63,.08)}
+  .calc label{font-weight:700;font-size:14px;display:flex;justify-content:space-between;margin-bottom:8px}
+  .calc input[type=range]{width:100%;accent-color:var(--red);margin-bottom:22px}
+  .row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px}
+  .row:last-of-type{border-bottom:0}
+  .row strong{font-family:Oswald,sans-serif;font-size:20px}
+  .result{margin-top:16px;background:var(--navy);color:#fff;border-radius:8px;padding:18px;text-align:center}
+  .result .display{font-size:40px;color:#fff}
+  .result .display em{font-style:normal;color:#FF5A6E}
+  .fine{font-size:12px;color:var(--muted);margin-top:10px}
+
+  /* Lines */
+  .lines{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+  .card{border:1px solid var(--line);border-radius:12px;padding:28px;position:relative;background:#fff}
+  .card .ico{width:52px;height:52px;border-radius:10px;background:var(--navy);display:grid;place-items:center;margin-bottom:18px}
+  .card h3{font-size:24px;color:var(--navy);margin-bottom:10px}
+  .card p{color:var(--muted);font-size:15px}
+  .card ul{list-style:none;margin-top:14px}
+  .card li{font-size:14px;padding:5px 0 5px 22px;position:relative}
+  .card li::before{content:"★";color:var(--red);position:absolute;left:0;font-size:12px;top:7px}
+  .card .pill{display:inline-block;margin-top:16px;font-size:12px;font-weight:700;padding:5px 10px;border-radius:20px;background:var(--off);color:var(--navy)}
+
+  /* Models */
+  .models{background:var(--navy);color:#fff}
+  .models h2{color:#fff}
+  .models .sub{color:rgba(255,255,255,.75)}
+  .mgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
+  .model{background:var(--navy-2);border-radius:12px;padding:20px;border:1px solid rgba(255,255,255,.08);position:relative}
+  .model .thumb{background:rgba(255,255,255,.06);border-radius:8px;aspect-ratio:4/3;display:grid;place-items:center;margin-bottom:16px}
+  .model.soon .thumb svg{opacity:.35}
+  .model h3{font-size:22px}
+  .model .type{font-size:13px;opacity:.7;margin:4px 0 12px}
+  .badge{display:inline-block;font-size:12px;font-weight:700;padding:5px 10px;border-radius:4px}
+  .badge.ok{background:var(--red);color:#fff}
+  .badge.no{background:rgba(255,255,255,.12);color:rgba(255,255,255,.75)}
+
+  /* Steps */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px;counter-reset:s}
+  .step{padding:26px;border-left:4px solid var(--red);background:var(--off);border-radius:0 10px 10px 0}
+  .step::before{counter-increment:s;content:"0" counter(s);font-family:Oswald,sans-serif;font-size:38px;color:var(--navy);display:block;margin-bottom:6px}
+  .step h3{font-size:20px;color:var(--navy);margin-bottom:6px}
+  .step p{font-size:15px;color:var(--muted)}
+  .pay{margin-top:28px;display:flex;flex-wrap:wrap;gap:10px}
+  .pay span{border:1px solid var(--line);border-radius:20px;padding:7px 14px;font-size:14px}
+
+  /* FAQ */
+  .faq{background:var(--off)}
+  details{background:#fff;border-radius:10px;padding:18px 22px;margin-top:12px;border:1px solid var(--line)}
+  summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;color:var(--navy)}
+  summary::after{content:"+";color:var(--red);font-size:22px;line-height:1}
+  details[open] summary::after{content:"–"}
+  details p{margin-top:10px;color:var(--muted);font-size:15px}
+
+  /* CTA final */
+  .final{background:var(--red);color:#fff;text-align:center;padding:70px 0}
+  .final h2{color:#fff}
+  .final p{opacity:.9;margin:8px auto 26px;max-width:520px}
+  .final .btn{background:var(--navy)}
+  .final .btn:hover{background:#06142b}
+
+  footer{background:var(--navy);color:rgba(255,255,255,.7);font-size:14px;padding:30px 0}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+  footer a{text-decoration:none}
+
+  .wa-float{position:fixed;right:20px;bottom:20px;width:60px;height:60px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 20px rgba(0,0,0,.25);z-index:30}
+
+  @media (max-width:860px){
+    .hero .wrap,.savings .grid{grid-template-columns:1fr}
+    .specs .wrap{grid-template-columns:repeat(3,1fr)}
+    .spec:nth-child(3){border-right:0}
+    .lines,.steps{grid-template-columns:1fr}
+    .mgrid{grid-template-columns:1fr 1fr}
+    nav .links{display:none}
+    section{padding:60px 0}
+  }
+</style>
+</head>
+<body>
+
+<div class="stripes"></div>
+<nav>
+  <div class="wrap">
+    <a href="#" class="logo" aria-label="Shaka Sports">
+      <!-- Logo: constelación de Virgo formando una bici -->
+      <svg width="38" height="30" viewBox="0 0 76 60" fill="none" aria-hidden="true">
+        <circle cx="16" cy="40" r="14" stroke="#fff" stroke-width="2.5"/>
+        <circle cx="60" cy="40" r="14" stroke="#fff" stroke-width="2.5"/>
+        <polyline points="16,40 30,22 50,22 60,40 38,40 30,22" stroke="#C8102E" stroke-width="2" fill="none"/>
+        <polyline points="50,22 47,12 54,10" stroke="#C8102E" stroke-width="2" fill="none"/>
+        <g fill="#fff"><circle cx="30" cy="22" r="2.6"/><circle cx="50" cy="22" r="2.6"/><circle cx="38" cy="40" r="2.6"/><circle cx="47" cy="12" r="2.6"/><circle cx="54" cy="10" r="2.2"/><circle cx="16" cy="40" r="2.2"/><circle cx="60" cy="40" r="2.2"/></g>
+      </svg>
+      <span>SHAKA <b>SPORTS</b></span>
+    </a>
+    <div class="links">
+      <a href="#ahorro">Ahorro</a>
+      <a href="#para-vos">Para vos</a>
+      <a href="#modelos">Modelos</a>
+      <a href="#comprar">Cómo comprar</a>
+      <a href="#faq">Preguntas</a>
+    </div>
+    <a class="btn small wa-link" href="#">Escribinos</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <span class="tag">Primer lote · Stock disponible</span>
+      <h1>Shaka <em>Raptor</em><br>Mountain bike R29</h1>
+      <p class="lead">Rodado 29, freno a disco, suspensión y 21 velocidades. Te la llevamos <strong>armada y regulada</strong> a tu casa en CABA, lista para salir a andar.</p>
+      <div class="price">
+        <span class="big">$229.999</span>
+        <small>transferencia o efectivo · entrega en CABA incluida<br>o $249.999 en cuotas con tarjeta</small>
+      </div>
+      <div class="ctas">
+        <a class="btn wa-link" href="#">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3z"/></svg>
+          Quiero la mía
+        </a>
+        <a class="btn ghost" href="#ahorro">¿Cuánto ahorro?</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <span class="stock">En stock</span>
+      <!-- REEMPLAZAR por foto real: <img src="raptor.jpg" alt="Shaka Raptor rodado 29"> -->
+      <svg viewBox="0 0 400 260" aria-label="Ilustración Shaka Raptor rodado 29">
+        <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="95" cy="170" r="70" stroke="#0B1F3F" stroke-width="9"/>
+          <circle cx="305" cy="170" r="70" stroke="#0B1F3F" stroke-width="9"/>
+          <circle cx="95" cy="170" r="22" stroke="#C8102E" stroke-width="4"/>
+          <circle cx="305" cy="170" r="22" stroke="#C8102E" stroke-width="4"/>
+          <polyline points="95,170 165,175 255,82 160,82 95,170" stroke="#C8102E" stroke-width="10"/>
+          <line x1="165" y1="175" x2="145" y2="62" stroke="#C8102E" stroke-width="10"/>
+          <line x1="255" y1="82" x2="305" y2="170" stroke="#0B1F3F" stroke-width="9"/>
+          <line x1="255" y1="82" x2="248" y2="52" stroke="#0B1F3F" stroke-width="8"/>
+          <line x1="228" y1="48" x2="276" y2="48" stroke="#0B1F3F" stroke-width="8"/>
+          <line x1="122" y1="58" x2="170" y2="58" stroke="#0B1F3F" stroke-width="10"/>
+          <circle cx="165" cy="175" r="13" stroke="#0B1F3F" stroke-width="5"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<div class="specs">
+  <div class="wrap">
+    <div class="spec"><div class="v">R29</div><div class="k">Pasa pozos y empedrado</div></div>
+    <div class="spec"><div class="v">21 vel.</div><div class="k">Cambios 3×7</div></div>
+    <div class="spec"><div class="v">Disco</div><div class="k">Frena seguro con lluvia</div></div>
+    <div class="spec"><div class="v">Suspensión</div><div class="k">Delantera</div></div>
+    <div class="spec"><div class="v">Armada</div><div class="k">Lista para andar</div></div>
+  </div>
+</div>
+
+<section class="savings" id="ahorro">
+  <div class="wrap grid">
+    <div>
+      <div class="kicker">Hacé la cuenta</div>
+      <h2>Tu bici se paga sola en pocos meses</h2>
+      <p class="sub">Si vas al trabajo en subte, ida y vuelta, gastás unos $70.000 por mes. Con lo que gastás en tres meses y medio te comprás la Raptor. Además llegás sin depender del subte, hacés ejercicio sin ir al gimnasio y ves la ciudad.</p>
+    </div>
+    <div class="calc">
+      <label for="dias">Días que vas a trabajar por semana <span id="diasOut">5</span></label>
+      <input type="range" id="dias" min="1" max="6" value="5">
+      <div class="row"><span>Viajes en subte por mes</span><strong id="viajes">44</strong></div>
+      <div class="row"><span>Gasto mensual en subte</span><strong id="mes">$70.574</strong></div>
+      <div class="row"><span>Gasto por año</span><strong id="anio">$846.888</strong></div>
+      <div class="result">
+        <div style="font-size:14px;opacity:.85">Recuperás la Raptor en</div>
+        <div class="display"><em id="meses">3,3</em> meses</div>
+      </div>
+      <p class="fine">Tarifa subte noviembre 2026 con SUBE registrada ($1.887 hasta 20 viajes, con 20%, 30% y 40% de descuento después de los 20, 30 y 40 viajes). Precio Raptor: $229.999.</p>
+    </div>
+  </div>
+</section>
+
+<section id="para-vos">
+  <div class="wrap">
+    <div class="kicker">Una bici para cada uno</div>
+    <h2>¿Para qué la querés?</h2>
+    <p class="sub">No todos andan en bici por lo mismo. Elegí lo tuyo.</p>
+    <div class="lines">
+      <div class="card">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div>
+        <h3>Ir al trabajo</h3>
+        <p>Dejá de pagar el subte. Pagate la bici.</p>
+        <ul><li>Se paga sola en ~3 meses</li><li>Horario fijo, sin paros ni demoras</li><li>Tu ejercicio diario, sin gimnasio</li></ul>
+        <span class="pill">Shaka Raptor · disponible</span>
+      </div>
+      <div class="card">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg></div>
+        <h3>Trabajar en delivery</h3>
+        <p>Más pedidos, menos desgaste.</p>
+        <ul><li>Un pedido más por día son ~$118.000 más por mes</li><li>Llegás entero a la última hora</li><li>Cuidás tus rodillas</li></ul>
+        <span class="pill">Shaka Mamba eléctrica · próximamente</span>
+      </div>
+      <div class="card">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></div>
+        <h3>Salir a pasear</h3>
+        <p>Recorré más, cansate menos.</p>
+        <ul><li>Costanera, Palermo, Tigre</li><li>Rodado 29: anda bien en cualquier calle</li><li>Disfrutá la ciudad a tu ritmo</li></ul>
+        <span class="pill">Shaka Raptor · disponible</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="models" id="modelos">
+  <div class="wrap">
+    <div class="kicker" style="color:#FF5A6E">La línea Shaka</div>
+    <h2>Modelos</h2>
+    <p class="sub">El primer lote es la Raptor. Los próximos ya están en camino.</p>
+    <div class="mgrid">
+      <div class="model">
+        <div class="thumb"><svg width="120" height="80" viewBox="0 0 120 80" fill="none" stroke="#fff" stroke-width="4"><circle cx="28" cy="52" r="20"/><circle cx="92" cy="52" r="20"/><polyline points="28,52 50,52 78,24 46,24 28,52" stroke="#C8102E"/><line x1="78" y1="24" x2="92" y2="52"/></svg></div>
+        <h3>Raptor</h3><div class="type">MTB rodado 29 · acero</div>
+        <span class="badge ok">En stock · $229.999</span>
+      </div>
+      <div class="model soon">
+        <div class="thumb"><svg width="120" height="80" viewBox="0 0 120 80" fill="none" stroke="#fff" stroke-width="4"><circle cx="28" cy="52" r="20"/><circle cx="92" cy="52" r="20"/><polyline points="28,52 50,52 78,24 46,24 28,52"/><rect x="54" y="30" width="16" height="8" fill="#fff"/></svg></div>
+        <h3>Mamba</h3><div class="type">Eléctrica de pedaleo asistido</div>
+        <span class="badge no">Próximamente</span>
+      </div>
+      <div class="model soon">
+        <div class="thumb"><svg width="120" height="80" viewBox="0 0 120 80" fill="none" stroke="#fff" stroke-width="4"><circle cx="28" cy="52" r="20"/><circle cx="92" cy="52" r="20"/><polyline points="28,52 50,52 78,24 46,24 28,52"/><line x1="78" y1="24" x2="92" y2="52"/></svg></div>
+        <h3>Aluminio R29</h3><div class="type">MTB liviana · Shimano</div>
+        <span class="badge no">Próximamente</span>
+      </div>
+      <div class="model soon">
+        <div class="thumb"><svg width="120" height="80" viewBox="0 0 120 80" fill="none" stroke="#fff" stroke-width="4"><circle cx="34" cy="56" r="14"/><circle cx="86" cy="56" r="14"/><polyline points="34,56 60,56 72,30 48,30"/><line x1="60" y1="56" x2="72" y2="30"/></svg></div>
+        <h3>Plegable</h3><div class="type">Urbana · rodado 20</div>
+        <span class="badge no">Próximamente</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="comprar">
+  <div class="wrap">
+    <div class="kicker">Simple y seguro</div>
+    <h2>Cómo comprar</h2>
+    <div class="steps">
+      <div class="step"><h3>Escribinos</h3><p>Por WhatsApp te pasamos fotos, colores y el talle según tu altura.</p></div>
+      <div class="step"><h3>Reservá</h3><p>Con una seña asegurás tu bici. El resto lo pagás cuando la recibís.</p></div>
+      <div class="step"><h3>Te la llevamos</h3><p>Entregas semanales en CABA. Llega armada, regulada y lista para salir.</p></div>
+    </div>
+    <div class="pay"><span>💸 Transferencia</span><span>💵 Efectivo</span><span>💳 Tarjeta en cuotas (Mercado Pago)</span></div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap" style="max-width:800px">
+    <div class="kicker">Preguntas frecuentes</div>
+    <h2>Lo que más nos preguntan</h2>
+    <details><summary>¿Qué talle me conviene?</summary><p>Decinos tu altura por WhatsApp y te decimos cuál te queda mejor.</p></details>
+    <details><summary>¿Cuándo me llega?</summary><p>Hacemos entregas en CABA una vez por semana. Cuando reservás te confirmamos el día.</p></details>
+    <details><summary>¿Viene armada?</summary><p>Sí. La entregamos armada y con frenos y cambios regulados.</p></details>
+    <details><summary>¿Tiene garantía?</summary><p>Sí, por defectos de fabricación en cuadro y componentes. Te pasamos el detalle por WhatsApp.</p></details>
+    <details><summary>¿Envían fuera de CABA?</summary><p>Consultanos: para GBA y el interior coordinamos el envío según la zona.</p></details>
+    <details><summary>¿Venden por mayor?</summary><p>Sí, a bicicleterías y comercios. Escribinos y te pasamos el precio por cantidad.</p></details>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Stock limitado del primer lote</h2>
+    <p>Reservá la tuya hoy y recibila armada en tu casa.</p>
+    <a class="btn wa-link" href="#">Quiero mi Shaka Raptor</a>
+  </div>
+</section>
+
+<div class="stripes"></div>
+<footer>
+  <div class="wrap">
+    <span>© 2026 Shaka Sports · Buenos Aires</span>
+    <span><a href="https://www.instagram.com/shakasportsar/" target="_blank" rel="noopener">Instagram @shakasportsar</a> · <a href="mailto:shakasports09@gmail.com">shakasports09@gmail.com</a></span>
+  </div>
+</footer>
+
+<a class="wa-float wa-link" href="#" aria-label="Escribinos por WhatsApp">
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3z"/></svg>
+</a>
+
+<script>
+  // Número del WhatsApp (bot). Cambiar acá si hace falta.
+  const WA_NUMBER = "5491131785158";
+  const WA_TEXT = "¡Hola! Quiero info de la Shaka Raptor rodado 29";
+  const waUrl = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(WA_TEXT);
+  document.querySelectorAll(".wa-link").forEach(a => { a.href = waUrl; a.target = "_blank"; a.rel = "noopener"; });
+
+  // Calculadora de ahorro (tarifa subte nov-2026, SUBE registrada)
+  const BASE = 1887, PRICE = 229999;
+  const fmt = n => "$" + Math.round(n).toLocaleString("es-AR");
+  function costoMes(v){
+    let c = 0;
+    for (let i = 1; i <= v; i++){
+      c += i <= 20 ? BASE : i <= 30 ? BASE*0.8 : i <= 40 ? BASE*0.7 : BASE*0.6;
+    }
+    return c;
+  }
+  const dias = document.getElementById("dias");
+  function update(){
+    const d = +dias.value;
+    const viajes = Math.round(d * 4.4 * 2);
+    const mes = costoMes(viajes);
+    document.getElementById("diasOut").textContent = d;
+    document.getElementById("viajes").textContent = viajes;
+    document.getElementById("mes").textContent = fmt(mes);
+    document.getElementById("anio").textContent = fmt(mes * 12);
+    document.getElementById("meses").textContent = (PRICE / mes).toFixed(1).replace(".", ",");
+  }
+  dias.addEventListener("input", update);
+  update();
+</script>
+</body>
+</html>
