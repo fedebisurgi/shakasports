@@ -7,6 +7,7 @@
 <meta property="og:title" content="Shaka Sports — Shaka Raptor rodado 29">
 <meta property="og:image" content="https://shakasports.com.ar/raptos.jpeg">
 <meta name="description" content="Shaka Raptor: mountain bike rodado 29, 21 velocidades, freno a disco y suspensión. Entrega armada a domicilio en CABA. $229.999.">
+<link rel="icon" type="image/png" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
@@ -117,6 +118,12 @@
   .pay{margin-top:28px;display:flex;flex-wrap:wrap;gap:10px}
   .pay span{border:1px solid var(--line);border-radius:20px;padding:7px 14px;font-size:14px}
 
+  .fgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  #reserva label{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:700;color:var(--navy)}
+  #reserva input,#reserva select{font:inherit;font-weight:400;padding:11px 12px;border:1px solid var(--line);border-radius:6px}
+  .notify{text-decoration:none;margin-left:4px}
+  @media (max-width:860px){.fgrid{grid-template-columns:1fr}}
+
   /* FAQ */
   .faq{background:var(--off)}
   details{background:#fff;border-radius:10px;padding:18px 22px;margin-top:12px;border:1px solid var(--line)}
@@ -155,14 +162,7 @@
 <nav>
   <div class="wrap">
     <a href="#" class="logo" aria-label="Shaka Sports">
-      <!-- Logo: constelación de Virgo formando una bici -->
-      <svg width="38" height="30" viewBox="0 0 76 60" fill="none" aria-hidden="true">
-        <circle cx="16" cy="40" r="14" stroke="#fff" stroke-width="2.5"/>
-        <circle cx="60" cy="40" r="14" stroke="#fff" stroke-width="2.5"/>
-        <polyline points="16,40 30,22 50,22 60,40 38,40 30,22" stroke="#C8102E" stroke-width="2" fill="none"/>
-        <polyline points="50,22 47,12 54,10" stroke="#C8102E" stroke-width="2" fill="none"/>
-        <g fill="#fff"><circle cx="30" cy="22" r="2.6"/><circle cx="50" cy="22" r="2.6"/><circle cx="38" cy="40" r="2.6"/><circle cx="47" cy="12" r="2.6"/><circle cx="54" cy="10" r="2.2"/><circle cx="16" cy="40" r="2.2"/><circle cx="60" cy="40" r="2.2"/></g>
-      </svg>
+      <img src="logo.png" alt="Shaka Sports" style="height:42px;width:auto;display:block">
       <span>SHAKA <b>SPORTS</b></span>
     </a>
     <div class="links">
@@ -196,7 +196,7 @@
     </div>
     <div class="hero-art">
       <span class="stock">En stock</span>
-      <img src="raptos.jpeg" alt="Shaka Raptor mountain bike rodado 29" loading="eager">
+      <img src="raptor.png" alt="Shaka Raptor mountain bike rodado 29" loading="eager" onerror="this.onerror=null;this.src='raptos.jpeg'">
     </div>
   </div>
 </header>
@@ -268,29 +268,30 @@
   <div class="wrap">
     <div class="kicker" style="color:#FF5A6E">La línea Shaka</div>
     <h2>Modelos</h2>
-    <p class="sub">El primer lote es la Raptor. Los próximos ya están en camino.</p>
+    <p class="sub">La Raptor está en stock. Del resto avisanos y te escribimos cuando ingrese.</p>
     <div class="mgrid">
       <div class="model">
-        <div class="thumb"><svg width="120" height="80" viewBox="0 0 120 80" fill="none" stroke="#fff" stroke-width="4"><circle cx="28" cy="52" r="20"/><circle cx="92" cy="52" r="20"/><polyline points="28,52 50,52 78,24 46,24 28,52" stroke="#C8102E"/><line x1="78" y1="24" x2="92" y2="52"/></svg></div>
+        <div class="thumb"><img src="raptor.png" alt="Shaka Raptor" style="width:100%;height:100%;object-fit:contain" onerror="this.parentNode.innerHTML='&lt;span style=&quot;opacity:.5;font-size:13px&quot;&gt;Foto pr&oacute;ximamente&lt;/span&gt;'"></div>
         <h3>Raptor</h3><div class="type">MTB rodado 29 · acero</div>
         <span class="badge ok">En stock · $229.999</span>
       </div>
       <div class="model soon">
-        <div class="thumb"><svg width="120" height="80" viewBox="0 0 120 80" fill="none" stroke="#fff" stroke-width="4"><circle cx="28" cy="52" r="20"/><circle cx="92" cy="52" r="20"/><polyline points="28,52 50,52 78,24 46,24 28,52"/><rect x="54" y="30" width="16" height="8" fill="#fff"/></svg></div>
+        <div class="thumb"><img src="mamba.png" alt="Shaka Mamba eléctrica" style="width:100%;height:100%;object-fit:contain" onerror="this.parentNode.innerHTML='&lt;span style=&quot;opacity:.5;font-size:13px&quot;&gt;Foto pr&oacute;ximamente&lt;/span&gt;'"></div>
         <h3>Mamba</h3><div class="type">Eléctrica de pedaleo asistido</div>
-        <span class="badge no">Próximamente</span>
+        <span class="badge no">Sin stock</span> <a class="badge no notify" href="#" data-model="Mamba eléctrica">Avisame 🔔</a>
       </div>
       <div class="model soon">
-        <div class="thumb"><svg width="120" height="80" viewBox="0 0 120 80" fill="none" stroke="#fff" stroke-width="4"><circle cx="28" cy="52" r="20"/><circle cx="92" cy="52" r="20"/><polyline points="28,52 50,52 78,24 46,24 28,52"/><line x1="78" y1="24" x2="92" y2="52"/></svg></div>
-        <h3>Aluminio R29</h3><div class="type">MTB liviana · Shimano</div>
-        <span class="badge no">Próximamente</span>
+        <div class="thumb"><img src="eagle.png" alt="Shaka Eagle aluminio" style="width:100%;height:100%;object-fit:contain" onerror="this.parentNode.innerHTML='&lt;span style=&quot;opacity:.5;font-size:13px&quot;&gt;Foto pr&oacute;ximamente&lt;/span&gt;'"></div>
+        <h3>Eagle</h3><div class="type">MTB rodado 29 · aluminio</div>
+        <span class="badge no">Sin stock</span> <a class="badge no notify" href="#" data-model="Eagle aluminio">Avisame 🔔</a>
       </div>
       <div class="model soon">
-        <div class="thumb"><svg width="120" height="80" viewBox="0 0 120 80" fill="none" stroke="#fff" stroke-width="4"><circle cx="34" cy="56" r="14"/><circle cx="86" cy="56" r="14"/><polyline points="34,56 60,56 72,30 48,30"/><line x1="60" y1="56" x2="72" y2="30"/></svg></div>
-        <h3>Plegable</h3><div class="type">Urbana · rodado 20</div>
-        <span class="badge no">Próximamente</span>
+        <div class="thumb"><img src="gecko.png" alt="Shaka Gecko plegable" style="width:100%;height:100%;object-fit:contain" onerror="this.parentNode.innerHTML='&lt;span style=&quot;opacity:.5;font-size:13px&quot;&gt;Foto pr&oacute;ximamente&lt;/span&gt;'"></div>
+        <h3>Gecko</h3><div class="type">Plegable urbana · rodado 20</div>
+        <span class="badge no">Sin stock</span> <a class="badge no notify" href="#" data-model="Gecko plegable">Avisame 🔔</a>
       </div>
     </div>
+    <p style="font-size:12px;opacity:.6;margin-top:16px">Imágenes de Mamba, Eagle y Gecko ilustrativas.</p>
   </div>
 </section>
 
@@ -299,10 +300,25 @@
     <div class="kicker">Simple y seguro</div>
     <h2>Cómo comprar</h2>
     <div class="steps">
-      <div class="step"><h3>Escribinos</h3><p>Por WhatsApp te pasamos fotos, colores y el talle según tu altura.</p></div>
-      <div class="step"><h3>Reservá</h3><p>Con una seña asegurás tu bici. El resto lo pagás cuando la recibís.</p></div>
-      <div class="step"><h3>Te la llevamos</h3><p>Entregas semanales en CABA. Llega armada, regulada y lista para salir.</p></div>
+      <div class="step"><h3>Completá tus datos</h3><p>Dejanos dónde la entregamos y tu altura para elegir el talle.</p></div>
+      <div class="step"><h3>Pagá la seña</h3><p>$30.000 por Mercado Pago y tu Raptor queda reservada. El resto, al recibirla.</p></div>
+      <div class="step"><h3>Te la llevamos</h3><p>Entregamos los sábados en CABA. Llega armada, regulada y lista para salir.</p></div>
     </div>
+    <form id="reserva" class="calc" style="margin-top:36px;max-width:720px">
+      <h3 style="font-size:24px;color:var(--navy);margin-bottom:16px">Reservá tu Raptor</h3>
+      <div class="fgrid">
+        <label>Nombre y apellido<input name="nombre" required></label>
+        <label>Celular<input name="cel" type="tel" required placeholder="11 2345 6789"></label>
+        <label>Dirección de entrega (CABA)<input name="dir" required placeholder="Calle, número, piso/depto"></label>
+        <label>Barrio<input name="barrio" required></label>
+        <label>Tu altura (cm)<input name="altura" type="number" min="120" max="210" required></label>
+        <label>Pago del resto<select name="pago"><option>Transferencia</option><option>Efectivo</option><option>Tarjeta en cuotas (Mercado Pago)</option></select></label>
+      </div>
+      <label style="margin-top:10px">Comentarios (opcional)<input name="coment" placeholder="Color preferido, horario, etc."></label>
+      <button class="btn" type="submit" style="margin-top:18px;border:0;cursor:pointer;width:100%;justify-content:center">1 · Enviar mis datos por WhatsApp</button>
+      <a id="paySena" class="btn" href="#" target="_blank" rel="noopener" style="margin-top:10px;width:100%;justify-content:center;background:#009EE3;display:none">2 · Pagar seña $30.000 con Mercado Pago</a>
+      <p class="fine">Solo CABA. Para GBA o interior escribinos y te cotizamos el envío.</p>
+    </form>
     <div class="pay"><span>💸 Transferencia</span><span>💵 Efectivo</span><span>💳 Tarjeta en cuotas (Mercado Pago)</span></div>
   </div>
 </section>
@@ -312,7 +328,7 @@
     <div class="kicker">Preguntas frecuentes</div>
     <h2>Lo que más nos preguntan</h2>
     <details><summary>¿Qué talle me conviene?</summary><p>Decinos tu altura por WhatsApp y te decimos cuál te queda mejor.</p></details>
-    <details><summary>¿Cuándo me llega?</summary><p>Hacemos entregas en CABA una vez por semana. Cuando reservás te confirmamos el día.</p></details>
+    <details><summary>¿Cuándo me llega?</summary><p>Entregamos los sábados en CABA. Con la seña paga, tu bici sale en el reparto del sábado siguiente.</p></details>
     <details><summary>¿Viene armada?</summary><p>Sí. La entregamos armada y con frenos y cambios regulados.</p></details>
     <details><summary>¿Tiene garantía?</summary><p>Sí, por defectos de fabricación en cuadro y componentes. Te pasamos el detalle por WhatsApp.</p></details>
     <details><summary>¿Envían fuera de CABA?</summary><p>Consultanos: para GBA y el interior coordinamos el envío según la zona.</p></details>
@@ -346,6 +362,24 @@
   const WA_TEXT = "¡Hola! Quiero info de la Shaka Raptor rodado 29";
   const waUrl = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(WA_TEXT);
   document.querySelectorAll(".wa-link").forEach(a => { a.href = waUrl; a.target = "_blank"; a.rel = "noopener"; });
+
+  // Link de pago de la seña (Mercado Pago). Pegar acá el link.
+  const MP_SENA_LINK = "PEGAR_LINK_MP";
+  const wa = t => "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(t);
+  document.querySelectorAll(".notify").forEach(a => { a.href = wa("¡Hola! Avisame cuando ingrese la Shaka " + a.dataset.model); a.target="_blank"; a.rel="noopener"; });
+  document.getElementById("reserva").addEventListener("submit", e => {
+    e.preventDefault();
+    const f = Object.fromEntries(new FormData(e.target));
+    const msg = "🚲 RESERVA SHAKA RAPTOR\n" +
+      "Nombre: " + f.nombre + "\nCelular: " + f.cel +
+      "\nDirección: " + f.dir + " (" + f.barrio + ", CABA)" +
+      "\nAltura: " + f.altura + " cm\nPago del resto: " + f.pago +
+      (f.coment ? "\nComentarios: " + f.coment : "") +
+      "\n\nVoy a pagar la seña de $30.000 por Mercado Pago.";
+    window.open(wa(msg), "_blank");
+    const pay = document.getElementById("paySena");
+    if (MP_SENA_LINK.startsWith("http")) { pay.href = MP_SENA_LINK; pay.style.display = "flex"; }
+  });
 
   // Calculadora de ahorro (tarifa subte nov-2026, SUBE registrada)
   const BASE = 1887, PRICE = 229999;
